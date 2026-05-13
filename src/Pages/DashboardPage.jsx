@@ -1,9 +1,14 @@
+import HeaderGreetings from "../Dashboard component/HeaderGreetings";
+
 export default function DashboardPage(){
 return (
-<div className="flex items-center justify-center h-full"> 
-    <h1 className="text-white text-4xl michroma">
-        Welcome to Pluto Project Management
-    </h1>
-</div>
+
+
+    <div className="ml-4">
+        <div>
+            <HeaderGreetings />
+        </div>
+        
+    </div>
 )
 }
