@@ -1,4 +1,5 @@
 import HeaderGreetings from "../Dashboard component/HeaderGreetings";
+import NewTaskButton from "../Dashboard component/NewtaskButton";
 import SearchBar from "../Dashboard component/SearchBar";
 
 export default function DashboardPage(){
@@ -11,9 +12,12 @@ return (
         </div>
         
 
-        <div className= "mt-4 display flex justify-end mr-20">
+        <div className= "mt-4 display flex justify-end mr-20 Michroma">
             <SearchBar />
+            <NewTaskButton />
         </div>
+
+        
     </div>
 )
 }
