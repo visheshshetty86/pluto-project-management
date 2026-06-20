@@ -11,8 +11,8 @@ export default function TaskbuttonOverlayModal({ onClose }) {
   const [isStatusOpen, setIsStatusOpen] = useState(false);
 
   return (
-    <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center">
-      <div className="bg-[#16161B] w-[560px] overflow-y-auto rounded-2xl border border-white/[0.06]">
+    <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center ">
+      <div className="bg-[#16161B] w-[560px] overflow-y-auto rounded-2xl border border-white/[0.06] pl-2 ">
 
         {/* Header */}
         <div className="p-6 flex justify-between items-center">
@@ -179,11 +179,73 @@ export default function TaskbuttonOverlayModal({ onClose }) {
                 </div>
               )}
             </div>
+          </div>  
+        </div>
+        {/* Due Date and estimate*/}
+         <div className="flex gap-34 mt-2 pl-2 ">
+            
+            <div className = "text-white flex flex-col ">
+              <span >Due date</span>
+              <input type = "date" className="text-sm text-[white] border border-white/[0.06] p-2 focus:outline-none focus:ring-2 focus:ring-blue-400 mt-2 p" >
+              </input>
+            </div>
+
+            <div className = "text-white flex flex-col ">
+              <span >Estimate</span>
+              <input type = "text" placeholder="eg. 3h" className="text-sm text-white border border-white/[0.06] p-2 focus:outline-none focus:ring-2 focus:ring-blue-400 mt-2 p" >
+              </input>
+            </div>
           </div>
 
+          {/* Priority */} 
+          <div className="flex mt-2 pl-2 ">
+            <div className="text-white mt-2 ">
+              <span>Priority</span>
+              
+              <div className="mt-4 flex gap-4">
+                <button className="border border-white/[0.06] p-2 text-white hover:bg-white/10 w-[90px] rounded-md">
+                  <span className= "rounded-full bg-red-500 w-3 h-3 inline-block "></span>
+                  <span> High </span>
+                </button>
+                <button className="border border-white/[0.06] p-2 text-white hover:bg-white/10 w-[120px] rounded-md">
+                  <span className= "rounded-full bg-yellow-500 w-3 h-3 inline-block mr-2"></span>
+                  <span> Medium </span>
+                </button>
+                <button className="border border-white/[0.06] p-2 text-white hover:bg-white/10 w-[90px] rounded-md">
+                  <span className= "rounded-full bg-green-500 w-3 h-3 inline-block mr-2"></span>
+                  <span> Low </span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Assignee */}
+        <div className="flex mt-2 pl-2 ">
+          <div className="text-white mt-2 ">
+            <span>Assignee</span>
+            <div className= " mt-2 gap-2 flex">
+              <button className = "rounded-full bg-green-700 w-8 h-8 text-white flex items-center justify-center">
+                A
+              </button>
+              <button className = "rounded-full bg-yellow-700 w-8 h-8 text-white flex items-center justify-center">
+                B
+              </button>
+              <button className = "rounded-full bg-blue-700 w-8 h-8 text-white flex items-center justify-center">
+                C
+              </button>
+            </div>
+          </div>
         </div>
 
+<div className="h-px w-full bg-white/[0.06] mt-4" />
+
+        {/* Create Task Button */}
+        <div className="flex justify-end p-6">
+          <button className="bg-[#5B8DFE] text-white text-[12px] font-medium px-4 py-2 rounded-md">
+            Create Task
+          </button>
+        </div>
       </div>
     </div>
-  );
+  );  
 }

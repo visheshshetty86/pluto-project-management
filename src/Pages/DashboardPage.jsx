@@ -12,7 +12,7 @@ return (
         </div>
         
 
-        <div className= "mt-4 display flex justify-end mr-20 Michroma">
+        <div className= "mt-4 display flex justify-end mr-20 ">
             <SearchBar />
             <NewTaskButton />
         </div>
